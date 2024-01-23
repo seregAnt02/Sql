@@ -2,7 +2,7 @@
 ##### Dmz:
 Вывод статуса количества мобильных телефонов
 
-SELECT product_name , product_count,
+* SELECT product_name , product_count,
 CASE
 WHEN product_count < 2
 THEN 'little'
