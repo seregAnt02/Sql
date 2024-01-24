@@ -6,3 +6,5 @@
    * SELECT id, firstname, lastname, salary FROM staff ORDER BY salary DESC;
 3. Необходимо вывести идентификатор, имя, фамилию, заработную плату пяти самых высокооплачиваемых сотрудников из сущности staff.
    * SELECT id, firstname, lastname, salary FROM staff WHERE salary > 25000;
+4. Посчитайте и выведите суммарную зарплату (salary) по каждой специальности (роst) из сущности staff. Порядок вывода атрибутов: должность, суммарная зарплата.
+   * SELECT post, SUM(salary) AS salary FROM staff GROUP BY post;
