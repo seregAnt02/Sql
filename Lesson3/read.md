@@ -3,4 +3,4 @@
 1. Необходимо вывести идентификатор, имя, фамилию, заработную плату из сущности staff при этом данные должны быть отсортированы в порядке возрастания заработной платы.
    * SELECT id, firstname, lastname, salary FROM staffORDER BY salary;
 2. Необходимо вывести идентификатор, имя, фамилию, заработную плату из сущности staff при этом данные должны быть отсортированы в порядке убывания заработной платы.
-   * SELECT id, firstname, lastname, salary FROM staff ORDER BY salary;
+   * SELECT id, firstname, lastname, salary FROM staff ORDER BY salary DESC;
