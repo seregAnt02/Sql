@@ -8,3 +8,5 @@
    * SELECT id, firstname, lastname, salary FROM staff WHERE salary > 25000;
 4. Посчитайте и выведите суммарную зарплату (salary) по каждой специальности (роst) из сущности staff. Порядок вывода атрибутов: должность, суммарная зарплата.
    * SELECT post, SUM(salary) AS salary FROM staff GROUP BY post;
+5. Посчитайте и выведите количество сотрудников с должностью 'Рабочий' и возрастом не моложе 24 лет и не старше 49 лет.
+   * SELECT COUNT(*) FROM staff WHERE post = "Рабочий" AND age BETWEEN 24 AND 49;
