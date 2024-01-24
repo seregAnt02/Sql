@@ -10,3 +10,5 @@
    * SELECT post, SUM(salary) AS salary FROM staff GROUP BY post;
 5. Посчитайте и выведите количество сотрудников с должностью 'Рабочий' и возрастом не моложе 24 лет и не старше 49 лет.
    * SELECT COUNT(*) FROM staff WHERE post = "Рабочий" AND age BETWEEN 24 AND 49;
+6. Посчитайте и выведите количество уникальных должностей, имеющихся у сотрудников в сущности 'staff'.
+   * SELECT COUNT(DISTINCT post) FROM  staff;
