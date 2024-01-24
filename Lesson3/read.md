@@ -12,3 +12,5 @@
    * SELECT COUNT(*) FROM staff WHERE post = "Рабочий" AND age BETWEEN 24 AND 49;
 6. Посчитайте и выведите количество уникальных должностей, имеющихся у сотрудников в сущности 'staff'.
    * SELECT COUNT(DISTINCT post) FROM  staff;
+7. Найдите средний возраст сотрудников по каждой должности из сущности staff. Выведите только те должности, у которых средний возраст меньше 30 лет.
+   * SELECT post FROM staff GROUP BY post HAVING AVG(age) <= 30;
