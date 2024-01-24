@@ -4,3 +4,5 @@
    * SELECT id, firstname, lastname, salary FROM staffORDER BY salary;
 2. Необходимо вывести идентификатор, имя, фамилию, заработную плату из сущности staff при этом данные должны быть отсортированы в порядке убывания заработной платы.
    * SELECT id, firstname, lastname, salary FROM staff ORDER BY salary DESC;
+3. Необходимо вывести идентификатор, имя, фамилию, заработную плату пяти самых высокооплачиваемых сотрудников из сущности staff.
+   * SELECT id, firstname, lastname, salary FROM staff WHERE salary > 25000;
