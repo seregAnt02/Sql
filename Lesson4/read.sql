@@ -12,4 +12,4 @@ ON profiles.user_id = likes.user_id;
 FROM profiles p 
 JOIN likes l 
 WHERE l.user_id = p.user_id
-GROUP BY gender
+GROUP BY gender;
