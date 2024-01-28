@@ -13,15 +13,3 @@ VALUES
 ('Apple'),
 ('Samsung'),
 ('Huawei');
-
-2. Необходимо вывести название, производителя и статус количества для мобильных телефонов.
-  SELECT product_name , manufacturer,
-CASE
-WHEN product_count < 100
-THEN 'little'
-WHEN product_count > 100 and product_count <= 300
-THEN 'many'
-WHEN product_count > 300
-THEN 'lots'
-END AS status_count
-FROM mobile_phones;
