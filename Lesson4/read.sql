@@ -13,3 +13,11 @@ FROM profiles p
 JOIN likes l 
 WHERE l.user_id = p.user_id
 GROUP BY gender;
+3. Выведите идентификаторы пользователей, которые не отправляли ни одного сообщения.
+* SELECT DISTINCT id AS 'id'
+FROM users
+WHERE NOT EXISTS (
+	SELECT from_user_id
+	FROM messages
+	WHERE users.id = messages.from_user_id
+);
