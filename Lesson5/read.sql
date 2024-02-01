@@ -10,4 +10,18 @@
 FROM users u
 LEFT JOIN messages m ON u.id = m.from_user_id 
 GROUP BY u.id;
-  
+
+/*2. Получите список сообщений, отсортированных по возрастанию даты отправки.
+Вычислите разность между соседними значениями дат отправки. Разности выразите в минутах.
+Выведите идентификатор сообщения, дату отправки, дату отправки следующего сообщения и разницу даты отправки соседних сообщений.*/
+* SELECT id, created_at, 
+ LEAD(created_at) OVER() AS lead_time,
+ timestampdiff(minute, created_at, LEAD(created_at) OVER()) AS minute_lead_diff
+FROM messages;
+
+
+* select id, created_at, 
+    timestampdiff(minute,(select created_at from messages t2
+        where t2.id < t1.id order by t2.id desc limit 1), created_at) as diff
+from messages t1
+
