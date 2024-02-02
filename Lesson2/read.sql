@@ -2,7 +2,20 @@
 ##### Dmz:
 Вывод статуса количества мобильных телефонов
 
-1.
+1. -- Создание таблицы "manufacturer"
+DROP TABLE IF EXISTS manufacturer;
+CREATE TABLE manufacturer (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+-- Заполнение данными таблицы "manufacturer"
+INSERT INTO manufacturer (name)
+VALUES 
+('Apple'),
+('Samsung'),
+('Huawei');
+
 2. SELECT product_name , product_count,
 CASE
 WHEN product_count < 2
