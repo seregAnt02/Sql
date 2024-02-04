@@ -53,7 +53,7 @@ BEGIN
     
     RETURN delete_user_id;
 
-END; // 
+END// 
 
 DELIMITER ;
 
@@ -111,7 +111,7 @@ BEGIN
          
 	COMMIT;
 
-END; // 
+END// 
 
 DELIMITER ;
 
@@ -131,7 +131,7 @@ FOR EACH ROW BEGIN
 	   SET MESSAGE_TEXT = 'Длина названия сообщества (поле name) должна быть не менее 5 символов';
        INSERT INTO CommunityNameTrigger_exception_table VALUES();
    END IF; 
-END; // 
+END// 
 
 DELIMITER ;
 
