@@ -48,8 +48,8 @@ BEGIN
     DELETE FROM profiles
      WHERE profiles.user_id = delete_user_id;
     
-    DELETE FROM users
-     WHERE users.id = delete_user_id;
+    /*DELETE FROM users
+     WHERE users.id = delete_user_id;*/
     
     RETURN delete_user_id;
 
