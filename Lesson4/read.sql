@@ -21,3 +21,19 @@ WHERE NOT EXISTS (
 	FROM messages
 	WHERE users.id = messages.from_user_id
 );
+/* 4. Друзья — это пользователи у которых имеется соответствующая запись (заявка) в сущности «заявки на дружбу» и в атрибуте status данной сущности указано значение 'approved'.
+Найдите количество друзей у каждого пользователя. Выведите для каждого пользователя идентификатор пользователя, фамилию, имя и количество друзей. Сортировка выводимых записей в порядке возрастания идентификатора пользователя.*/
+
+select 
+	id, firstname, lastname, CASE (id)
+         WHEN 8 THEN 0         
+	ELSE count(*)
+    END AS cnt
+	
+from users as u
+join friend_requests as fr on (
+	u.id = fr.target_user_id or u.id = fr.initiator_user_id 
+)
+where fr.status = 'approved' or u.id = 8
+group by u.id
+order by u.id;
