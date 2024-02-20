@@ -183,3 +183,5 @@ OR
 /* эквивалентное условие 
 title LIKE 'б%'
 */
+##### Вывод информаций базы данных.
+select TABLE_SCHEMA, TABLE_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH  from information_schema.columns where table_name = 'users' AND table_schema = 'db_vera';
